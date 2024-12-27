@@ -1,3 +1,7 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 .btn {
   font-family: "Hind vadadora";
   font-size: 1rem;

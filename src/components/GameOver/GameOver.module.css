@@ -1,1 +1,1 @@
-.btn{font-family:"Hind vadadora";font-size:1rem;padding:5px 25px;border-radius:50px;border:none;cursor:pointer;position:fixed;top:65%;left:50%;transform:translate(-50%, -50%);z-index:70;cursor:pointer;border:none}
+*,*::after,*::before{box-sizing:border-box}.btn{font-family:"Hind vadadora";font-size:1rem;padding:5px 25px;border-radius:50px;border:none;cursor:pointer;position:fixed;top:65%;left:50%;transform:translate(-50%, -50%);z-index:70;cursor:pointer;border:none}

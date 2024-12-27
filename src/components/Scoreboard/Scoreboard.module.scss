@@ -1,0 +1,61 @@
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.scoreboard {
+  
+  text-align: center;
+  font-family: 'Just me again down here', sans-serif;
+  z-index: 70;
+  left: 10%;
+  top: 5%;
+  width: fit-content;
+  margin:50px 30px;
+  
+  h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Just me again down here', sans-serif;
+    margin: 0;
+  }
+
+  .results {
+    background-color: #D9D9D9; 
+    width:375px;
+    margin: 0px auto;
+
+    border-collapse: collapse;
+
+    th {
+      border: 2px solid #564848;
+      color:#564848;
+      background-color: #D9D9D9;
+      font-size: 2rem;
+      font-family: 'Just me again down here', sans-serif;
+      padding: 10px;
+    }
+
+    td {
+      border: 2px solid #666;
+      font-size: 1.5rem;
+      color:#564848;
+      padding: 20px;
+      text-align: center;
+    }
+
+    button{
+      background-color: #d9d9d900;
+      border: none;
+      cursor: pointer;
+    }
+
+    img{
+      width:30px;
+      height:40px;
+    }
+  }
+}
+

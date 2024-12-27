@@ -1,0 +1,19 @@
+.item {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: solid 1px white;
+  background-size: cover;
+  background-position: center;
+  
+
+  &_trap {
+    // background-color: blue;
+    background-image: url('../../assets/images/poison.png');
+  }
+
+  &_food {
+    // background-color: red;
+    background-image: url('../../assets/images/fraise.png');
+  }
+}

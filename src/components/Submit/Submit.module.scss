@@ -1,0 +1,26 @@
+.form {
+  position: absolute;
+  top: 100px;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 70;
+
+  label {
+    color: white;
+    font-size: 2rem;
+    font-family: "Just Me Again Down Here";
+    margin-right:20px;
+  }
+
+  input {
+    outline: none;
+    background-color: transparent;
+    font-size: 24px;
+    border: none;
+    color: white;
+    background-color: white;
+    color:#777670;
+    font-family: "Hind vadadora";
+    padding:5px;
+  }
+}

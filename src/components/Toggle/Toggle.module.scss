@@ -1,0 +1,36 @@
+@import "../../fonts.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  .mode {
+    font-family: "Just Me Again Down Here";
+    font-size: 2rem;
+    color: white;
+  }
+
+  .toggle {
+    width: 50px;
+    height: 25px;
+    border-radius: 24px;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    padding:2px;
+
+    .switch {
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      background-color: #8B8B8B;
+      transition: all 0.2s;
+
+      &_active {
+        transform: translateX(120%);
+      }
+    }
+  }
+}

@@ -77,12 +77,6 @@ const Board = () => {
     }, 1500); 
   };
   
-    
-  
-
-
-
-  
 
   const isOutOfBorder = (head) => {
     if (head[0] >= 500 || head[1] >= 500 || head[0] < 0 || head[1] < 0) {
@@ -92,7 +86,7 @@ const Board = () => {
     }
   };
 
-  const hasEatenItem = ({ getter, setter }) => {
+  const hasEatenItem = ({ getter, setter, isFood }) => {
     const head = snakeData[snakeData.length - 1];
 
     // comparer les coordonnées de la tête du snake avec LES food
@@ -108,7 +102,7 @@ const Board = () => {
 
       setter(newItemArray);
 
-      if (eatSound.current) {
+      if (isFood && eatSound.current) {
         eatSound.current.pause(); // Arrête le son actuel
         eatSound.current.currentTime = 0; // Réinitialise le son au début
         eatSound.current.play().catch((error) => {
@@ -157,10 +151,12 @@ const Board = () => {
     const snakeAteFood = hasEatenItem({
       getter: foodArray,
       setter: setFoodArray,
+      isFood: true,
     });
     const snakeAteTrap = hasEatenItem({
       getter: trapArray,
       setter: setTrapArray,
+      isFood: false,
     });
 
     // console.log(snakeCollapsed);

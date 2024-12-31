@@ -16,4 +16,11 @@
   z-index: 70;
   cursor: pointer;
   border:none;
+  transition: padding 0.2s ease-in-out;
+
+  &:hover {
+    padding: 5px 30px;
+  }
 }
+
+

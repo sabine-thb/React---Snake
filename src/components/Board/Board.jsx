@@ -41,6 +41,13 @@ const Board = () => {
   const trapTimer = useRef(0);
   const direction = useRef("RIGHT");
   const canChangeDirection = useRef(true);
+  const eatSound = useRef(null);
+  const gameOverSound = useRef(null);
+
+  useEffect(() => {
+    eatSound.current = new Audio("/audio/eat.mp3");
+    gameOverSound.current = new Audio("/audio/gameOver.mp3");
+  }, []);
 
   const gameIsOver = () => {
     gsap.ticker.remove(gameLoop);
@@ -53,6 +60,13 @@ const Board = () => {
     gameOverContainer.style.opacity = 1;
   
     setGameOver(true);
+
+    if (gameOverSound.current) {
+      gameOverSound.current.play().catch((error) => {
+        console.error("Erreur de lecture audio :", error);
+      });
+    }
+
   
     setTimeout(() => {
       gameOverContainer.style.opacity=0;
@@ -93,6 +107,14 @@ const Board = () => {
       const newItemArray = getter.filter((_item) => _item !== item);
 
       setter(newItemArray);
+
+      if (eatSound.current) {
+        eatSound.current.pause(); // Arrête le son actuel
+        eatSound.current.currentTime = 0; // Réinitialise le son au début
+        eatSound.current.play().catch((error) => {
+          console.error("Erreur de lecture audio :", error);
+        });
+      }
 
       return true;
     } else {
